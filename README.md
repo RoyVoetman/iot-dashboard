@@ -32,6 +32,10 @@ npm install && npm run dev
     * [docs](https://github.com/barryvdh/laravel-ide-helper)
     * Automatic phpDoc generation for Laravel Facades
         * `php artisan ide-helper:generate`
+        
+## License
+The MIT License (MIT). Please see [License File](LICENSE) for more information.
+
 
 ## Authors
 * [Roy Voetman](https://www.royvoetman.nl)
