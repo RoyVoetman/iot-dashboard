@@ -20,7 +20,7 @@ This application is part of my **IOT dashboard suite**. For more information abo
 
 ```bash
 composer install
-php -r "file_exists('.env') || copy('.env.example', '.env');"
+cp ./.env.example ./.env
 php artisan key:generate
 php artisan migrate
 php artisan db:seed
