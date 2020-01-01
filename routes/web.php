@@ -11,16 +11,17 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Auth::routes(['register' => false]);
+
+Route::redirect('/', '/login');
+
+/*
+ |--------------------------------------------------------------------------
+ | Dashboard.
+ |--------------------------------------------------------------------------
+ */
+Route::group(['middleware' => 'auth', 'namespace' => 'Admin', 'prefix' => 'admin'], function () {
+    Route::get('/', 'DashboardController');
+
+    Route::post('/update/{ip}', 'UnitController@update');
 });
-
-Route::post('/update/{ip}', function (string $ip) {
-    \App\Events\UpdateRequest::dispatch($ip, request('payload'));
-
-    return redirect('/');
-});
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

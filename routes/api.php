@@ -13,10 +13,4 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->put('/webhook/update-unit/{ip}/{value}', function (string $ip, string $value) {
-    $unit = \App\Models\Unit::where('ip', $ip)->first();
-    $unit->value = $value;
-    $unit->save();
-
-    \App\Events\UnitUpdated::dispatch($unit);
-});
+Route::middleware('auth:api')->put('/webhook/update-unit/{ip}/{value}', 'Admin\UnitController@webhook');

@@ -4,6 +4,8 @@
 ## Introduction
 A Realtime IOT dashboard build with Laravel which communicates with the [iot-base](https://github.com/RoyVoetman/iot-base) via [Pusher](https://pusher.com/).
 
+![](https://www.royvoetman.nl/iot/dashboard.jpg)
+
 ## About this project
 This application is part of my **IOT dashboard suite**. For more information about what this suite of projects entails a reference is made to [IOT dashboard suite](https://github.com/RoyVoetman/iot-base/blob/master/docs/IOT%20dashboard%20suite.md).
 
